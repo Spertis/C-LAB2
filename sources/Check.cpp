@@ -1,6 +1,7 @@
-//Copyright by C++_developers1488
+//Copyright by Spertis
 
 #include "Check.h"
+
 #include <chrono>
 #include <random>
 #include <sstream>
@@ -24,7 +25,7 @@ Check::Check(int i, Check_type t, int64_t s)
 }
 
 
-double Check::run() {
+double Check::  run() {
   using std::chrono::duration;
   using std::chrono::milliseconds;
   char k = 0;
@@ -72,7 +73,7 @@ void Check::print(std::ostream& os) {
   os << "\t- experiment:\n"
   << "\t\tnumber: " << id << std::endl
   << "\t\tinput_data:\n"
-     <<"\t\t\tbuffer_size: "
+     <<"\t\t\tarray_size: "
   << Byte_value(size) << std::endl
   << "\t\tresults:\n"
      <<"\t\t\tduration: "

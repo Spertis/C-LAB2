@@ -1,4 +1,4 @@
-//Copyright by C++_developers1488
+//Copyright by Spertis
 
 #ifndef INCLUDE_TIME_HPP_
 #define INCLUDE_TIME_HPP_
