@@ -8,6 +8,7 @@ int main() {
 
   long i = 1;
   int k = 0;
+
   int length;
   std::cout << "Введите количество массивов: ";
   std::cin >> length;
