@@ -15,18 +15,17 @@ int main() {
   long i = 1;
   int k = 0;
   int length;
-  std::cout << "Введите количество массивов: ";
+  std::cout << "Введите количество уровней кэша: ";
   std::cin >> length;
   while (k < length) {
-    printf("Укажите размер кэша номер %d: ", ++k);
+    printf("Укажите размер кэша L%d: ", ++k);
     std::cin >> i;
     if (i <= 0) {
-      printf("Размер массива %d некорректен\n",k--);
+      printf("Размер кэша L%d некорректен\n",k--);
     }
     else size.push_back(i);
   }
 //    show_vector(size);
-  std::cout << size.size();
     Time front(_forward, size);
     front.print(std::cout);
     Time inv(_reverse, size);
