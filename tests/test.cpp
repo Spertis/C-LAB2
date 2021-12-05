@@ -17,7 +17,7 @@ TEST(ExperimentTest, printTest)
   std::string s("\t- experiment:\n"
       "\t\tnumber: 0\n"
       "\t\tinput_data:\n"
-      "\t\t\tarray_size: "+
+      "\t\t\tcache_size: "+
       Byte_value(e.size) +
       "\n\t\tresults:\n"
       "\t\t\tduration: "+ std::to_string(e.time) +" ms\n");

@@ -24,7 +24,22 @@ Check::Check(int i, Check_type t, int64_t s)
   Check::size = s;
 }
 
-
+std::string to_string(Check_type type)
+{
+  std::stringstream ss;
+  switch (type) {
+    case _random:
+      ss << "_random";
+      break;
+    case _forward:
+      ss << "_forward";
+      break;
+    case _reverse:
+      ss << "_reverse";
+      break;
+  }
+  return ss.str();
+}
 double Check::  run() {
   using std::chrono::duration;
   using std::chrono::milliseconds;
@@ -73,7 +88,7 @@ void Check::print(std::ostream& os) {
   os << "\t- experiment:\n"
   << "\t\tnumber: " << id << std::endl
   << "\t\tinput_data:\n"
-     <<"\t\t\tarray_size: "
+     <<"\t\t\tcache_size: "
   << Byte_value(size) << std::endl
   << "\t\tresults:\n"
      <<"\t\t\tduration: "
